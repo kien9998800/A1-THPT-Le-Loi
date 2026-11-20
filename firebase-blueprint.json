@@ -26,7 +26,9 @@
       "properties": {
         "id": { "type": "string" },
         "sender": { "type": "string" },
+        "recipient": { "type": "string" },
         "content": { "type": "string" },
+        "classId": { "type": "string" },
         "timestamp": { "type": "string" }
       },
       "required": ["id", "sender", "content", "timestamp"]
