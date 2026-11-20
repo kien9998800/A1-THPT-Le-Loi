@@ -1,0 +1,45 @@
+{
+  "entities": {
+    "blog": {
+      "title": "Blog Post",
+      "description": "A blog post",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "author": { "type": "string" },
+        "date": { "type": "string" },
+        "content": { "type": "string" },
+        "category": { "type": "string" },
+        "imageUrl": {
+          "type": ["string", "array"]
+        },
+        "likes": { "type": "number" },
+        "comments": { "type": "array" },
+        "id": { "type": "number" }
+      },
+      "required": ["title", "author", "date", "content", "category", "id"]
+    },
+    "message": {
+      "title": "Message",
+      "description": "A message submitted via Letters",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "sender": { "type": "string" },
+        "content": { "type": "string" },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["id", "sender", "content", "timestamp"]
+    }
+  },
+  "firestore": {
+    "/blogs/{blogId}": {
+      "schema": { "$ref": "#/entities/blog" },
+      "description": "Stores blog posts"
+    },
+    "/messages/{messageId}": {
+      "schema": { "$ref": "#/entities/message" },
+      "description": "Stores messages submitted via letters"
+    }
+  }
+}

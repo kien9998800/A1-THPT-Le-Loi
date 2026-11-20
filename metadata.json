@@ -1,0 +1,8 @@
+{
+  "name": "Kỷ niệm 10A1",
+  "description": "Trang web kỷ yếu lưu giữ kỷ niệm lớp 10A1 niên khóa 2025-2026, THPT số 1 Lê Lợi, Quảng Trị",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
